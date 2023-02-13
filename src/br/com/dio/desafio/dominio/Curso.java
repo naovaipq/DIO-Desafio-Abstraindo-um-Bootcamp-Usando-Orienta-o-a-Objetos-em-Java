@@ -2,26 +2,17 @@ package br.com.dio.desafio.dominio;
 
 import java.util.Objects;
 
-public class Curso {
+public class Curso extends Conteudo{
 
-    private String titulo;
-    private String descricao;
     private int cargaHoraria;
 
-    public String getTitulo() {
-        return titulo;
+    @Override
+    public double calcularXp() {
+        return XP_PADRAO * cargaHoraria;
     }
 
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
-    }
+    public Curso() {
 
-    public String getDescricao() {
-        return descricao;
-    }
-
-    public void setDescricao(String descricao) {
-        this.descricao = descricao;
     }
 
     public int getCargaHoraria() {
@@ -35,22 +26,9 @@ public class Curso {
     @Override
     public String toString() {
         return "Curso{" +
-                "titulo='" + titulo + '\'' +
-                ", descricao='" + descricao + '\'' +
+                "titulo='" + getTitulo() + '\'' +
+                ", descricao='" + getDescricao() + '\'' +
                 ", cargaHoraria=" + cargaHoraria +
                 '}';
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Curso curso = (Curso) o;
-        return cargaHoraria == curso.cargaHoraria && Objects.equals(titulo, curso.titulo) && Objects.equals(descricao, curso.descricao);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(titulo, descricao, cargaHoraria);
     }
 }
