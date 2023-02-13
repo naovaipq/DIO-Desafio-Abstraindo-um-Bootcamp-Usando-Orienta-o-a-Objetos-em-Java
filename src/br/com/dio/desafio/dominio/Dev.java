@@ -10,8 +10,32 @@ public class Dev {
     private Set<Conteudo> conteudosInscritos = new LinkedHashSet<>();
     private Set<Conteudo> conteudoConcluidos = new LinkedHashSet<>();
 
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public Set<Conteudo> getConteudosInscritos() {
+        return conteudosInscritos;
+    }
+
+    public void setConteudosInscritos(Set<Conteudo> conteudosInscritos) {
+        this.conteudosInscritos = conteudosInscritos;
+    }
+
+    public Set<Conteudo> getConteudoConcluidos() {
+        return conteudoConcluidos;
+    }
+
+    public void setConteudoConcluidos(Set<Conteudo> conteudoConcluidos) {
+        this.conteudoConcluidos = conteudoConcluidos;
+    }
+
     public void inscreverBootcamp(Bootcamp bootcamp){
-        this.conteudosInscritos.addAll(bootcamp.getConsteudos());
+        this.conteudosInscritos.addAll(bootcamp.getConteudos());
         bootcamp.getDevsInscritos().add(this);
     }
 

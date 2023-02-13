@@ -14,7 +14,7 @@ public class Bootcamp {
 
     private Set<Dev> devsInscritos = new HashSet<>();
 
-    private Set<Conteudo> consteudos = new LinkedHashSet<>();
+    private Set<Conteudo> conteudos = new LinkedHashSet<>();
 
     public String getNome() {
         return nome;
@@ -48,12 +48,12 @@ public class Bootcamp {
         this.devsInscritos = devsInscritos;
     }
 
-    public Set<Conteudo> getConsteudos() {
-        return consteudos;
+    public Set<Conteudo> getConteudos() {
+        return conteudos;
     }
 
-    public void setConsteudos(Set<Conteudo> consteudos) {
-        this.consteudos = consteudos;
+    public void setConteudos(Set<Conteudo> consteudos) {
+        this.conteudos = consteudos;
     }
 
     @Override
@@ -61,11 +61,11 @@ public class Bootcamp {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Bootcamp bootcamp = (Bootcamp) o;
-        return Objects.equals(nome, bootcamp.nome) && Objects.equals(descricao, bootcamp.descricao) && Objects.equals(dataInical, bootcamp.dataInical) && Objects.equals(dataFinal, bootcamp.dataFinal) && Objects.equals(devsInscritos, bootcamp.devsInscritos) && Objects.equals(consteudos, bootcamp.consteudos);
+        return Objects.equals(nome, bootcamp.nome) && Objects.equals(descricao, bootcamp.descricao) && Objects.equals(dataInical, bootcamp.dataInical) && Objects.equals(dataFinal, bootcamp.dataFinal) && Objects.equals(devsInscritos, bootcamp.devsInscritos) && Objects.equals(conteudos, bootcamp.conteudos);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(nome, descricao, dataInical, dataFinal, devsInscritos, consteudos);
+        return Objects.hash(nome, descricao, dataInical, dataFinal, devsInscritos, conteudos);
     }
 }
